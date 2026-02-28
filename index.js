@@ -5,7 +5,7 @@ const { PDFParse } = require("pdf-parse");
 const Groq = require("groq-sdk");
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json({ limit: "10MB" }));
 app.use(cors());
